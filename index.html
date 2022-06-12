@@ -1,0 +1,245 @@
+<html>
+<!--
+TOPIC:New fetures in Html5 and semantic and structural elemnets
+--other tages we learn
+
+    bdi ,dialog,fgcapption,figure,mark,
+    meter tag,progess,time,rp,
+wbr
+
+-->
+    <head>
+        <title> Day 7</title>
+
+        <style>
+            body,ul,h3 {
+             
+                margin:0px;
+                
+                padding:0px
+
+            }
+        header  {
+            background-color:white;
+            box-shadow: 0px 20px 10px lightgray;
+                display: inline-block;
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+                border:1px solid black;
+            
+                padding:5px 0px
+            }
+            nav{
+                margin:0px 10px;
+                border:1px solid black
+            }
+            .logo{
+                width:60px;
+                height:80px;
+                border:2px solid black;
+                margin:0px 10px
+            }
+            .logo img{
+                width:100%;
+                height:100%;
+                border-radius:100px
+            }
+            nav ul{
+                display:flex;
+                list-style-type: none;
+                
+                
+              
+            }
+            /*text decoration property should be applied to a */
+            nav ul li a:hover{
+                text-decoration: underline;
+            } 
+            nav ul li a{
+                text-decoration:none;
+                color:brown;
+            }
+            nav ul li{
+               border:2px solid black ;
+               padding:10px
+            }
+
+        .herobanner{
+            width:100%;
+            height:250px;
+            border:1px solid black ;
+        }
+        .hero_img{
+            width:100%;
+            height:100%
+        }
+        .detailed_layout{
+            border:1px solid black ;
+         
+            display:flex;
+            flex-wrap:wrap;
+        }
+        
+        .sidebar{
+            border:1px solid black ;
+            background-color: lightblue;
+            width:30%;
+        }
+        .article_container{
+            border:1px solid black;
+        
+        }
+          .sidebar ul {
+
+list-style-type: none;
+;
+       }
+       .sidebar ul li{
+         
+           padding:8px;
+           border-bottom:1px solid grey ;
+       }
+       .sidebar ul li img{
+           height:20px;
+           width:20px;
+           margin-right: 10px;
+
+       }
+       .sidebar ul li a{
+       display:flex;
+       align-items: center;
+       }
+       .sidebar h3{
+           text-align: center;
+       }
+       .article_container table th,tr,td{
+           border:1px solid grey;
+           text-align: center;
+           
+       }
+       .article_container table{
+        border-collapse: collapse;
+        width:100%
+       }
+       .article_container{
+           padding:10px;
+           width:68%;
+           display:flex;
+           flex-direction: column;
+           justify-content:center
+
+       }
+       footer{
+           background-color: black;
+           padding:20px;
+           text-align: center;
+           color:white
+       }
+      details{
+          margin:10px 0px;
+      }
+       details summary{
+           border:1px solid lightblue;
+           padding:0px 10px;
+           cursor:pointer
+       }
+       details p{
+           margin-top: 10px;
+           border:1px solid lightgray;
+         
+       }
+        </style>
+
+    </head>
+
+
+    <body>
+        <header>
+            <div class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzRDAgg6OQImrGTzQLcvIBOgJ3AnvBLXpAeQ&usqp=CAU" alt="logo">
+            </div>
+            <nav>
+               
+                <ul>
+                    <li>
+                        <a href="#"><span>Home</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span>About</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span>Contacts</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+
+            <section class="herobanner">
+                <img  class="hero_img" src="https://images.deliveryhero.io/image/fd-hk/LH/w7ci-hero.jpg">
+
+            </section>
+            <section class="detailed_layout">
+                <aside class="sidebar">
+                    <h3>varities</h3>
+                    <ul>
+                        <li><a>  <img src="https://www.kindpng.com/picc/m/151-1515163_100-veg-logo-png-transparent-png.png" class="icon"> <span>Non Veg</span></a></li>
+                        <li><a>  <img src="data:image/png;base64,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" class="icon"><span>Non Veg</span></a></li>
+                    </ul>
+                </aside>
+                <article class="article_container">
+                    <table>
+                        <caption>Macdonald Menu</caption>
+                        <tr>
+                            <th>Price</th>
+                            <th>Item Name</th>
+                        </tr>
+                        <tr>
+                            <td>Burger</td>
+                            <td>Rs:70</td>
+                        </tr>
+
+                        <tr>
+                            <td>Pizza</td>
+                            <td>Rs 259</td>
+                        </tr>
+                        <tr>
+                            <td>Fries</td>
+                            <td>Rs 150</td>
+                        </tr>
+                        <tr>
+                            <td>Ice cream</td>
+                            <td>Rs 50</td>
+                        </tr>
+
+                    </table>
+                    <details>
+                        <summary>Magrita <mark>10%</mark></summary>
+                            <p>it is made up od special indgredients</p>
+                      
+                    </details>
+                    <details>
+                        <summary>Magrita</summary>
+                            <p>it is made up od special indgredients</p>
+                      
+                    </details>
+                    <details>
+                        <summary>Magrita</summary>
+                            <p>it is made up od special indgredients</p>
+                      
+                    </details>
+                    <details>
+                        <summary>Magrita</summary>
+                            <p>it is made up od special indgredients</p>
+                      
+                    </details>
+                </article>
+               
+            </section>
+
+
+        </main>
+        <footer>Conatcts:</footer>
+    </body>
+</html>
